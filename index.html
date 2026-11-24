@@ -74,21 +74,6 @@
                 <a href="#hero" class="logo d-flex align-items-center">
                     <img src="assets/img/logos/SF26-logo-white.png" height="40px" alt="Nexus STEM Racing Team Logo">
                 </a>
-                <script>
-                    const navbar = document.querySelector('.header');
-                    const logo = document.getElementById('logo');
-                    const bar = document.getElementById('divider-bar')
-
-                    window.addEventListener('scroll', () => {
-                        if (window.scrollY > 100) {             // adjust scroll threshold
-                            logo.src = 'assets/img/logos/SF26-logo-main.png';           // alternate logo
-                            bar.setAttribute("fill", "#3a3a3a");
-                        } else {
-                            logo.src = 'assets/img/logos/SF26-logo-white.png';          // original logo
-                            bar.setAttribute("fill", "#FFF");
-                        }
-                    });
-                </script>
             </div>
             <div class="col d-flex align-items-center">
                 <svg width="2" height="40px" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true">
@@ -100,20 +85,22 @@
                     <img id="sr-logo" src="assets/img/logos/stem-racing.webp" height="40px" alt="STEM Racing Official Logo">
                 </a>
                 <script>
-                    const navbar = document.querySelector('.header');
-                    const logo = document.getElementById('sr-logo');
-                    const bar = document.getElementById('divider-bar')
+                    const nexusLogo = document.querySelector('.logo img');
+                    const srLogo = document.getElementById('sr-logo');
+                    const bar = document.getElementById('divider-bar');
 
                     window.addEventListener('scroll', () => {
-                        if (window.scrollY > 100) {             // adjust scroll threshold
-                            logo.src = 'assets/img/logos/stem-racing-dark.webp';           // alternate logo
+                        if (window.scrollY > 100) {
+                            nexusLogo.src = 'assets/img/logos/SF26-logo-main.png';
+                            srLogo.src = 'assets/img/logos/stem-racing-dark.webp';
                             bar.setAttribute("fill", "#3a3a3a");
                         } else {
-                            logo.src = 'assets/img/logos/stem-racing.webp';          // original logo
-                            bar.setAttribute("fill", "#FFF");
-                        }
-                    });
-                </script>
+                        nexusLogo.src = 'assets/img/logos/SF26-logo-white.png';
+                        srLogo.src = 'assets/img/logos/stem-racing.webp';
+                        bar.setAttribute("fill", "#FFF");
+                    }
+    });
+</script>
             </div>
         </div>
 
