@@ -2354,10 +2354,12 @@ body {
   }
 }
 
-.feature-image {
+.features .feature-box img.feature-image {
+    display: block;
     width: 100%;
+    max-width: 250px;
     height: 160px;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin: 15px auto 0;
 }
