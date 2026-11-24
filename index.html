@@ -72,8 +72,23 @@
         <div class="row align-items-stretch d-flex">
             <div class="col d-flex">
                 <a href="#hero" class="logo d-flex align-items-center">
-                    <img src="assets/img/logos/SF26-logo-main.png" height="40px" alt="Nexus STEM Racing Team Logo">
+                    <img src="assets/img/logos/SF26-logo-white.png" height="40px" alt="Nexus STEM Racing Team Logo">
                 </a>
+                <script>
+                    const navbar = document.querySelector('.header');
+                    const logo = document.getElementById('logo');
+                    const bar = document.getElementById('divider-bar')
+
+                    window.addEventListener('scroll', () => {
+                        if (window.scrollY > 100) {             // adjust scroll threshold
+                            logo.src = 'assets/img/logos/SF26-logo-main.png';           // alternate logo
+                            bar.setAttribute("fill", "#3a3a3a");
+                        } else {
+                            logo.src = 'assets/img/logos/SF26-logo-white.png';          // original logo
+                            bar.setAttribute("fill", "#FFF");
+                        }
+                    });
+                </script>
             </div>
             <div class="col d-flex align-items-center">
                 <svg width="2" height="40px" xmlns="http://www.w3.org/2000/svg" role="presentation" aria-hidden="true">
